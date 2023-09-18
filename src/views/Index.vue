@@ -46,7 +46,7 @@ const dyData = computed(() =>
 );
 
 const navStyle = computed(
-  () => "grid-template-columns: repeat(" + topKeys.length + ", 5rem);"
+  () => "grid-template-columns: repeat(" + topKeys.value.length + ", 5rem);"
 );
 
 function video(item) {
