@@ -8,7 +8,9 @@
           @click="$router.back(-1)"
         /> -->
         <div class="logo" @click="$router.back(-1)">TV Online</div>
-        <button>查看源码</button>
+        <a href="https://github.com/weekend-project-space/tv-online"
+          >查看源码</a
+        >
       </div>
     </header>
     <router-view></router-view>
@@ -38,11 +40,13 @@ header {
     max-height: 30px;
     font-size: 26px;
   }
-  button {
+  a {
     background: #f00;
     border: none;
     color: #fff;
     padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+    text-decoration: none;
   }
 }
 </style>
