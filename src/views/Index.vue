@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="top-warp">
+    <nav class="top-warp" :style="navStyle">
       <li
         v-for="i in topKeys"
         :key="i"
@@ -43,6 +43,10 @@ const dyData = computed(() =>
   data.value.filter(
     (o) => key.value == "所有" || o.title.indexOf(key.value) > -1
   )
+);
+
+const navStyle = computed(
+  () => "grid-template-columns: repeat(" + topKeys.length + ", 5rem);"
 );
 
 function video(item) {
