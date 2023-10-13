@@ -96,7 +96,7 @@ onMounted(() => {
     data.value = d
       .filter((o) => o.url.indexOf("https") > -1)
       .map((o) => ({
-        user: { avatar: o.meta["tvg-logo"], name: o.name },
+        user: { avatar: (o.meta&&o.meta["tvg-logo"])||'/favicon.ico', name: o.name },
         url: o.url,
         thumb: "/bg.png", //o.meta["tvg-logo"],
         title: o.name + " - - 直播",
